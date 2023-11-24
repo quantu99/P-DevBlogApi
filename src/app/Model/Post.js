@@ -20,6 +20,11 @@ const Post = new Schema({
         type: Date,
         default: Date.now(),
     },
+    cat: [
+        {
+            type: String,
+        },
+    ],
     comment: [
         {
             type: mongoose.Schema.Types.ObjectId,
