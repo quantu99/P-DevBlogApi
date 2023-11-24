@@ -14,6 +14,7 @@ const PostController = {
                     title: req.body.title,
                     description: req.body.description,
                     image: req.body.image,
+                    cat: req.body.cat,
                 });
                 const newPostSaved = await newPost.save();
                 return res.status(200).json(newPostSaved);
