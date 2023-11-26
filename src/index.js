@@ -7,6 +7,7 @@ const database = require('./database');
 const authRoute = require('./route/auth');
 const postRoute = require('./route/post');
 const commentRoute = require('./route/comment');
+const userRoute = require('./route/user');
 dotenv.config();
 const PORT = process.env.PORT;
 database.connect();
@@ -20,6 +21,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use('/v1/auth', authRoute);
 app.use('/v1/post', postRoute);
 app.use('/v1/comment', commentRoute);
+app.use('/v1/user', userRoute);
 app.listen(PORT || 9000, () => {
     console.log(`This app is running on http://localhost:${PORT}`);
 });
