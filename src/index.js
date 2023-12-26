@@ -8,6 +8,8 @@ const authRoute = require('./route/auth');
 const postRoute = require('./route/post');
 const commentRoute = require('./route/comment');
 const userRoute = require('./route/user');
+const conversationRoute = require('./route/conversation');
+const messageRoute = require('./route/message');
 dotenv.config();
 const PORT = process.env.PORT;
 database.connect();
@@ -22,6 +24,8 @@ app.use('/v1/auth', authRoute);
 app.use('/v1/post', postRoute);
 app.use('/v1/comment', commentRoute);
 app.use('/v1/user', userRoute);
+app.use('/v1/conversation', conversationRoute);
+app.use('/v1/message', messageRoute);
 app.listen(PORT || 9000, () => {
     console.log(`This app is running on http://localhost:${PORT}`);
 });
