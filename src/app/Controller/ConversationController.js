@@ -29,7 +29,7 @@ const ConversationController = {
     },
     getDetailConv: async (req, res) => {
         try {
-            const detailConv = await Conversation.findById(req.params.conversationId);
+            const detailConv = await Conversation.findById(req.params.conversationId).populate('members');
             return res.status(200).json(detailConv);
         } catch (err) {
             return res.status(500).json({ message: err.message });
