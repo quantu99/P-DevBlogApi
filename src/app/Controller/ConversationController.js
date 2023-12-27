@@ -24,7 +24,15 @@ const ConversationController = {
             return res.status(200).json(conversations);
         } catch (err) {
             console.error(err);
-            return res.status(500).json({ message: 'Error fetching conversations' });
+            return res.status(500).json({ message: err.message });
+        }
+    },
+    getDetailConv: async (req, res) => {
+        try {
+            const detailConv = await Conversation.findById(req.params.conversationId);
+            return res.status(200).json(detailConv);
+        } catch (err) {
+            return res.status(500).json({ message: err.message });
         }
     },
 };
