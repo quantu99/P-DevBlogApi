@@ -4,12 +4,11 @@
     "description": "",
     "main": "src/index.js",
     "engines": {
-        "node": ">=18.17.0"
+        "node": "16.20.1"
     },
     "scripts": {
         "start": "nodemon --inspect src/index.js",
-        "test": "echo \"Error: no test specified\" && exit 1",
-        "build": "PATH=$PATH:/path/to/node/bin next build"
+        "test": "echo \"Error: no test specified\" && exit 1"
     },
     "author": "",
     "license": "ISC",
