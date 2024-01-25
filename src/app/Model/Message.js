@@ -8,10 +8,7 @@ const Message = new Schema({
         type: mongoose.Types.ObjectId,
         ref: 'User',
     },
-    receiver: {
-        type: mongoose.Types.ObjectId,
-        ref: 'User',
-    },
+
     text: {
         type: String,
     },
